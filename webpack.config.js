@@ -9,7 +9,12 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
   context: path.resolve(__dirname),
-  entry: './src/index.js',
+  entry: {
+    points: [
+      './src/index.js',
+      './src/styles/main.css'
+    ]
+  },
   output: {
     path: path.resolve(__dirname, './public/'),
     publicPath: '/',
@@ -56,7 +61,7 @@ module.exports = {
     ]
   },
   plugins: [
-    HtmlWebpackPluginConfig,
-    new ExtractTextPlugin('./styles/main.bundle.css')
+    new ExtractTextPlugin('styles/main.bundle.css'),
+    HtmlWebpackPluginConfig
   ]
 };
