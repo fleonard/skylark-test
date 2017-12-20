@@ -3,19 +3,23 @@ import { combineReducers } from 'redux';
 
 import { types } from '../actions';
 
-const ui = handleActions(
+const data = handleActions(
   {
-    [types.STORE_GIFS] (state, action) {
-      return { ...state, gifs: action.payload };
+    [types.SET_HOME] (state, action) {
+      return { ...state, home: action.payload };
+    },
+    [types.SET_EPISODE] (state, action) {
+      return { ...state, episode: action.payload };
     }
   },
   {
-    gifs: []
+    home: [],
+    episode: {}
   }
 );
 
 const reducers = combineReducers({
-  ui
+  data
 });
 
 export default reducers;

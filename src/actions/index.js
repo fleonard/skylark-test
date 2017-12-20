@@ -1,9 +1,10 @@
 import { createActions } from 'redux-actions';
 
 const types = {
-  CREATE_GIF: 'CREATE_GIF',
-  GET_GIFS: 'GET_GIFS',
-  STORE_GIFS: 'STORE_GIFS'
+  GET_SETS: 'GET_SETS',
+  SET_HOME: 'SET_HOME',
+  GET_EPISODE: 'GET_EPISODE',
+  SET_EPISODE: 'SET_EPISODE'
 };
 
 const actions = createActions(
