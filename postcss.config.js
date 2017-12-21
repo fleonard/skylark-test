@@ -1,7 +1,6 @@
 module.exports = {
   plugins: [
     require('postcss-import'),
-    require('postcss-nested'),
     require('postcss-extend'),
     require('postcss-mixins'),
     require('postcss-each'),
@@ -16,5 +15,6 @@ module.exports = {
       unitPrecision: 4,
       minPixelValue: 1
     }),
+    require('postcss-nested'),
   ]
 };

@@ -1,5 +1,42 @@
-.main {
-    width: 98%;
-    margin-left: auto;
-    margin-right: auto;
+@import "../../styles/variables";
+
+.container {
+  height: auto;
+  width: 100%;
+  position: absolute;
+  padding: 20px;
+  top: -100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--dark-grey);
+  transition: all .7s ease;
+  &.isEpisodeInfoVisible {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    z-index: 10;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  h2 {
+    padding-top: 20px;
+  }
+
+  h3{
+    padding-top: 5px;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+    padding-top: 10px;
+  }
 }

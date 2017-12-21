@@ -1,5 +1,48 @@
 :root {
+/* Colours
+========================================================================== */
+
+  --dark-grey: #161717;
+  --mid-grey: #293235;
+  --light-grey: #BCC5CA;
+
+/* Dimensions
+========================================================================== */
+
   --base-size: 16px;
+
+  /* Transitions
+========================================================================== */
+  
+  --transition-duration-s: 0.1s;
+  --transition-duration: 0.2s;
+  --transition-duration-l: 0.4s;
+  --transition-duration-xl: 0.8s;
+  --transition-easing: ease-out;
+
+  --ease: {
+    transition: all var(--transition-duration) var(--transition-easing);
+    transform: translateZ(0);
+  }
+
+/* Utilities
+========================================================================== */
+
+  --ellipsis: {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  --visible{
+    opacity: 1;
+    visibility: visible;
+  }
+  --hidden{
+    opacity: 0;
+    visibility: hidden;
+  }
+
 
   @custom-media --hv-view-width-xsml (min-width: 320px);
   @custom-media --hv-view-width-lxsml (min-width: 640px);

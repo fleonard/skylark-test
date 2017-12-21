@@ -1,5 +1,8 @@
-.main {
-    width: 98%;
-    margin-left: auto;
-    margin-right: auto;
+@import "../../styles/variables";
+
+.container {
+    position: relative;
+    padding: 10px 0;
+    background: var(--mid-grey);
+    z-index: 2;
 }

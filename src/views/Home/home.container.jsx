@@ -3,12 +3,13 @@ import { connect } from 'react-redux';
 
 import actions from '../../actions';
 
-import { skylarkGetSets } from '../../config/apis';
+import { skylarkGetData } from '../../config/apis';
 
 function mapStateToProps (state) {
-  const { home } = state.data;
+  const { errGetSets, home } = state.data;
 
   return {
+    errGetSets,
     home
   };
 }
@@ -16,7 +17,10 @@ function mapStateToProps (state) {
 function mapDispatchToProps(dispatch) {
   return {
     onInit() {
-      dispatch(actions.getSets(skylarkGetSets()));
+      dispatch(actions.getSets(skylarkGetData('/api/sets/')));
+    },
+    onClick(url) {
+      dispatch(actions.getEpisode(skylarkGetData(url)));
     }
   };
 }
