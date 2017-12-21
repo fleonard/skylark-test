@@ -33,16 +33,19 @@ class Home extends React.Component {
         <div>
           <div className={cn(styles.container)}>
             <h2>{home.title}</h2>
-            {
-              home.items.map((item, i) => {
-                if (item.content_type === 'divider') {
-                  return <h3 key={i}>{item.heading}</h3>;
-                }
-                if (item.content_type === 'episode') {
-                  return <p key={i} onClick={() => this.props.onClick(item.content_url)}>Episode {item.position}</p>;
-                }
-              })
-            }
+            {home.body ? <p className={cn(styles.body)}>{home.body}</p> : ''}
+            <div className={cn(styles.episodeList)}>
+              {
+                home.items.map((item, i) => {
+                  if (item.content_type === 'divider') {
+                    return <p className={cn(styles.headings)} key={i}>{item.heading}</p>;
+                  }
+                  if (item.content_type === 'episode') {
+                    return <p className={cn(styles.episode)} key={i} onClick={() => this.props.onClick(item.content_url)}>Episode {item.position}</p>;
+                  }
+                })
+              }
+            </div>
           </div>
           <EpisodeInfoContainer />
         </div>
