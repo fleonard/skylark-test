@@ -12,9 +12,6 @@
     },
     "sourceType": "module"
   },
-  "ecmaFeatures": {
-    "modules": true
-  },
   "globals": {
 
   },

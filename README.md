@@ -16,6 +16,16 @@ To run
 ```sh
 $ cd [repository directory]
 $ yarn start
+$ Project runs at http://localhost:8080/
+```
+
+## Tests
+
+To run
+
+```sh
+$ cd [repository directory]
+$ yarn test
 ```
 
 ## Tools used
@@ -28,3 +38,4 @@ $ yarn start
 - Babel.JS (ES6 transpiling)
 - PostCSS (CSS processing)
 - CSSNext (Tomorrow's CSS today!)
+- Jest (unit testing)

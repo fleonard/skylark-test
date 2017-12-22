@@ -53,3 +53,4 @@ const reducers = combineReducers({
 });
 
 export default reducers;
+export { data, ui };
